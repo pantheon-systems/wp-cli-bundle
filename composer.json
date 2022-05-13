@@ -9,8 +9,8 @@
     "license": "MIT",
     "repositories": [
         {
-            "type": "github",
-            "url": "https://github.com/rwagner00/search-replace-command"
+            "type": "vcs",
+            "url": "https://github.com/pantheon-systems/search-replace-command"
         }
     ],
     "require": {
