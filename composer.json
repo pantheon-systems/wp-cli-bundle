@@ -7,15 +7,10 @@
     ],
     "homepage": "https://wp-cli.org",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/pantheon-systems/search-replace-command"
-        }
-    ],
     "require": {
         "php": ">=5.6",
         "composer/composer": "^1.10.23 || ^2.2.3",
+        "cweagans/composer-patches": "^1.7",
         "wp-cli/cache-command": "^2",
         "wp-cli/checksum-command": "^2.1",
         "wp-cli/config-command": "^2.1",
@@ -36,7 +31,7 @@
         "wp-cli/rewrite-command": "^2",
         "wp-cli/role-command": "^2",
         "wp-cli/scaffold-command": "^2",
-        "wp-cli/search-replace-command": "dev-master",
+        "wp-cli/search-replace-command": "^2",
         "wp-cli/server-command": "^2",
         "wp-cli/shell-command": "^2",
         "wp-cli/super-admin-command": "^2",
@@ -52,7 +47,8 @@
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "platform": {
             "php": "5.6"
@@ -61,8 +57,14 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
         "branch-alias": {
             "dev-main": "2.6.x-dev"
+        },
+        "patches": {
+            "wp-cli/search-replace-command": {
+                "Fixes PHP8 unserialize() error https://github.com/wp-cli/search-replace-command/issues/122":"patches/pantheon-search-replace.patch"
+            }
         }
     },
     "autoload-dev": {

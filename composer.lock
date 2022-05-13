@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c710b9c7b65a441e56e2b44404f666b",
+    "content-hash": "310c93d98ec16b39d0f90780194ec0e7",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -547,6 +547,54 @@
                 }
             ],
             "time": "2022-02-24T20:20:32+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e9969cfc0796e6dea9b4e52f77f18e1065212871",
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.2"
+            },
+            "time": "2022-01-25T19:21:20+00:00"
         },
         {
             "name": "eftec/bladeone",
@@ -3375,16 +3423,16 @@
         },
         {
             "name": "wp-cli/search-replace-command",
-            "version": "dev-master",
+            "version": "v2.0.16",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pantheon-systems/search-replace-command.git",
-                "reference": "00828778482c29bed7c850dbe5b21453dbfde996"
+                "url": "https://github.com/wp-cli/search-replace-command.git",
+                "reference": "dbf21560fd91710b2900f5631448657d28f2b380"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/search-replace-command/zipball/00828778482c29bed7c850dbe5b21453dbfde996",
-                "reference": "00828778482c29bed7c850dbe5b21453dbfde996",
+                "url": "https://api.github.com/repos/wp-cli/search-replace-command/zipball/dbf21560fd91710b2900f5631448657d28f2b380",
+                "reference": "dbf21560fd91710b2900f5631448657d28f2b380",
                 "shasum": ""
             },
             "require": {
@@ -3396,7 +3444,6 @@
                 "wp-cli/extension-command": "^1.2 || ^2",
                 "wp-cli/wp-cli-tests": "^3.1"
             },
-            "default-branch": true,
             "type": "wp-cli-package",
             "extra": {
                 "branch-alias": {
@@ -3408,39 +3455,14 @@
                 ]
             },
             "autoload": {
-                "psr-4": {
-                    "": "src/"
-                },
                 "files": [
                     "search-replace-command.php"
-                ]
+                ],
+                "psr-4": {
+                    "": "src/"
+                }
             },
-            "scripts": {
-                "behat": [
-                    "run-behat-tests"
-                ],
-                "behat-rerun": [
-                    "rerun-behat-tests"
-                ],
-                "lint": [
-                    "run-linter-tests"
-                ],
-                "phpcs": [
-                    "run-phpcs-tests"
-                ],
-                "phpunit": [
-                    "run-php-unit-tests"
-                ],
-                "prepare-tests": [
-                    "install-package-tests"
-                ],
-                "test": [
-                    "@lint",
-                    "@phpcs",
-                    "@phpunit",
-                    "@behat"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3455,9 +3477,9 @@
             "homepage": "https://github.com/wp-cli/search-replace-command",
             "support": {
                 "issues": "https://github.com/wp-cli/search-replace-command/issues",
-                "source": "https://github.com/pantheon-systems/search-replace-command/tree/master"
+                "source": "https://github.com/wp-cli/search-replace-command/tree/v2.0.16"
             },
-            "time": "2022-04-05T18:37:33+00:00"
+            "time": "2021-12-13T22:48:28+00:00"
         },
         {
             "name": "wp-cli/server-command",
@@ -6860,7 +6882,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wp-cli/search-replace-command": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
